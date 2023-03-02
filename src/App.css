@@ -1,38 +1,81 @@
-.App {
+body{
+  background-color: #333;
+  color: #fff;
+}
+.App{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-bg{
+  background-color: #555;
+  margin-bottom: 24px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 6px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-bg div{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.todoItemNumber{
+  color: #999;
+  border: 1px solid #999;
+  height: 26px;
+  width: 26px;
+  display: flex;
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin-right: 8px;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-bg .todoItemText{
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-bg .done .todoItemText{
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-bg .iconsWrap{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+
+.todo-bg .iconsWrap span{
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 8px;
+  color: #00ff37;
+}
+
+.todo-bg .iconsWrap span:hover{
+  color: rgb(0, 200, 255);
+}
+
+#trashRed:hover{
+  color: rgb(255, 61, 61);
+}
+
+#penYellow:hover{
+  color: yellow;
+}
+
+.mr-20{
+  margin-right: 20px;
+}
+
+.my-20{
+  margin-bottom: 20px;
 }
